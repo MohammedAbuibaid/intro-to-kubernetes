@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: express-test
+  name: nginx
   labels:
-    app: express-test
+    app: nginx-server
 spec:
   containers:
-  - name: express-test
-    image: lukondefmwila/express-test:latest
-    ports:
-      - containerPort: 8080
+    - name: nginx-custom
+      image: maabuibaid/nginx-custom:versionOne
+      ports:
+        - containerPort: 80
