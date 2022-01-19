@@ -1,9 +1,9 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: express-api
+  name: nginx-api
   labels:
-    app: express-api
+    app: nginx-api
 spec:
   rules:
     - host: express-api.com
@@ -13,6 +13,6 @@ spec:
           pathType: Prefix
           backend:
             service:
-              name: express-test-svc 
+              name: nginx-service
               port:
                 number: 8080
