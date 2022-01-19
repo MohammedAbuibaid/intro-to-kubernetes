@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: express-test-svc
+  name: nginx-service-clusterip
 spec:
-  selector:
-    app: express-test
-  type: NodePort
+  type: ClusterIP
   ports:
-  - protocol: TCP
-    port: 8080
-    targetPort: 8080
+    - port: 8080
+      protocol: TCP
+      targetPort: 80
+  selector:
+    app: nginx-server
