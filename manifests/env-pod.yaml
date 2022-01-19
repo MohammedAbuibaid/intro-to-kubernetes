@@ -4,8 +4,8 @@ metadata:
   name: env-pod
 spec:
   containers:
-    - name: express-test
-      image: lukondefmwila/express-test:latest
+    - name: nginx-custom
+      image: maabuibaid/nginx-custom:versionOne
       command: ['sh', '-c', 'echo "configmap: $CONFIGMAPVAR secret: $SECRETVAR"']
       env:
         - name: CONFIGMAPVAR
