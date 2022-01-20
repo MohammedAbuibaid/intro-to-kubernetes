@@ -83,7 +83,7 @@ kubectl get pods
 kubectl delete -f deployment.yaml
 ```
 
-# Lab 03: 
+# Lab 03: Services
 1.	Create the NodePort service using the below command:
 ```
 kubectl create -f np_service.yaml
